@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MyPortfolio</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: Arial, sans-serif;
+        }
+        body {
+            background: #72687e;
+            color: white;
+            text-align: center;
+        }
+        .navbar {
+            background: #847edf;
+            padding: 15px;
+            display: flex;
+            justify-content: center;
+        }
+        .navbar a {
+            color: white;
+            margin: 0 15px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+        .container {
+            margin-top: 50px;
+        }
+        .profile-img {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            border: 5px solid white;
+        }
+        .content {
+            margin-top: 20px;
+        }
+        .section {
+            display: none;
+        }
+        .active {
+            display: block;
+        }
+    </style>
+</head>
+<body>
+    <div class="navbar">
+        <a href="#" onclick="showSection('home')">Home</a>
+        <a href="#" onclick="showSection('projects')">Projects</a>
+        <a href="#" onclick="showSection('skills')">Skills</a>
+        <a href="#" onclick="showSection('contact')">Contact</a>
+    </div>
+    
+    <div class="container">
+        <div id="home" class="section active">
+            <img src="C:\Users\RAAGHAA\OneDrive\Documents\Myimage.jpg" alt="Profile Picture" class="profile-img">
+            <h1>Raaghashree M</h1>
+            <p>Undergraduate Student at SRMIST, specializing in Cyber Security.</p>
+        </div>
+
+        <div id="projects" class="section">
+            <h2>Projects</h2>
+            <ul>
+                <li><b>Food Labelling for the Blind:</b> Assistive tool using Raspberry Pi for visually impaired users.</li>
+                <li><b>Online News Portal System:</b> A web-based platform displaying recent news and ads.</li>
+                <li><b>Password Generator & Manager:</b> Secure password generator and storage system.</li>
+                <li><b>Simple Calculator:</b> GUI-based calculator using Python.</li>
+            </ul>
+        </div>
+
+        <div id="skills" class="section">
+            <h2>Skills</h2>
+            <p><b>Programming:</b> Python, C, C++, MySQL, HTML</p>
+            <p><b>Familiar:</b> Java, Linux</p>
+            <p><b>Soft Skills:</b> Problem-Solving, Time Management, Adaptability, Leadership</p>
+        </div>
+
+        <div id="contact" class="section">
+            <h2>Contact</h2>
+            <p>Email: rm6984@srmist.edu.in</p>
+            <p>LinkedIn: <a href="https://www.linkedin.com/in/raaghashree" target="_blank">Raaghashree</a></p>
+            <p>GitHub: <a href="https://github.com/Raaghashree" target="_blank">Raaghashree</a></p>
+        </div>
+    </div>
+
+    <script>
+        function showSection(sectionId) {
+            var sections = document.getElementsByClassName('section');
+            for (var i = 0; i < sections.length; i++) {
+                sections[i].classList.remove('active');
+            }
+            document.getElementById(sectionId).classList.add('active');
+        }
+    </script>
+</body>
+</html>
